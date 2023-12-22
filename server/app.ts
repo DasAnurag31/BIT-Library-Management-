@@ -19,6 +19,8 @@ export const app = express();
 // body Parser
 app.use(express.json({ limit: "50mb" }));
 
+app.set("trust proxy", 1);
+
 // cookies Parser
 app.use(cookieParser());
 
@@ -49,6 +51,5 @@ app.all("*", (req: Request, res: Response, next: NextFunction) => {
   next(err);
 });
 
-app.set("trust proxy", 1);
 // Add error middleware
 app.use(ErrorMiddleware);
