@@ -1,0 +1,21 @@
+.my{
+    color: #27bbff;
+}
+.resizer {
+    opacity: 0;
+    height: 100%;
+    width: 5px;
+    background: #787d7d;
+    cursor: col-resize;
+    user-select: none;
+    touch-action: none;
+  }
+  
+  .resizer.isResizing {
+    background: #2eff31;
+    opacity: 1;
+  }
+  
+  *:hover > .resizer {
+    opacity: 1;
+  }
