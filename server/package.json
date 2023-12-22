@@ -23,10 +23,13 @@
   },
   "name": "server",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "build/server.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only server.ts",
+    "start": "node build/server.js",
+    "build": "tsc"
   },
   "author": "Anurag Das",
   "license": "ISC",
