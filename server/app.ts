@@ -49,5 +49,6 @@ app.all("*", (req: Request, res: Response, next: NextFunction) => {
   next(err);
 });
 
+app.set("trust proxy", 1);
 // Add error middleware
 app.use(ErrorMiddleware);

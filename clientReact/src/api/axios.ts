@@ -1,7 +1,8 @@
-import axios from 'axios';
-const BASE_URL = 'http://localhost:8000/api/v1';
+import axios from "axios";
+// const BASE_URL = 'http://localhost:8000/api/v1';
+const BASE_URL = "https://library-management-backend-ka15.onrender.com/api/v1";
 
-// Create an axios instance 
+// Create an axios instance
 export const authApi = axios.create({
   baseURL: BASE_URL,
   withCredentials: true, // for allowing cookies and managing CORS
@@ -13,4 +14,4 @@ export const axiosApi = axios.create({
 });
 
 // setting default for content type
-authApi.defaults.headers.common['Content-Type'] = 'application/json';
+authApi.defaults.headers.common["Content-Type"] = "application/json";
