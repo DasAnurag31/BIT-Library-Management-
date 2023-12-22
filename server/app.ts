@@ -23,7 +23,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 
 // cors and adding origin
-app.use(cors({ origin: ["http://localhost:3000","http://localhost:5173"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000","http://localhost:5173","https://library-management-backend-ka15.onrender.com"], credentials: true }));
 
 // testing route
 app.get("/test", (req: Request, res: Response, next: NextFunction) => {
