@@ -1,6 +1,7 @@
 import axios from "axios";
 // const BASE_URL = 'http://localhost:8000/api/v1';
-const BASE_URL = "https://library-management-backend-ka15.onrender.com/api/v1";
+// const BASE_URL = "https://library-management-backend-ka15.onrender.com/api/v1";
+const BASE_URL = "https://dasanurag.live/api/v1"
 
 // Create an axios instance
 export const authApi = axios.create({
