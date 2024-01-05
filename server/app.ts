@@ -19,13 +19,14 @@ export const app = express();
 // body Parser
 app.use(express.json({ limit: "50mb" }));
 
-app.set("trust proxy", 1);
+
 
 // cookies Parser
 app.use(cookieParser());
 
+app.set("trust proxy", 1);
 // cors and adding origin
-app.use(cors({ origin: ["http://localhost:3000","http://localhost:5173","https://library-management-backend-ka15.onrender.com"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000","http://localhost:5173","https://library-management-backend-ka15.onrender.com","https://dasanurag.live"], credentials: true }));
 
 // testing route
 app.get("/test", (req: Request, res: Response, next: NextFunction) => {
