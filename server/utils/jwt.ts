@@ -21,6 +21,7 @@ export const accessTokenOptions: ITokenOptions = {
   maxAge: accessTokenExpire * 60 * 60 * 1000,
   httpOnly: true,
   sameSite: "none",
+  secure:true,
 };
 
 const refreshTokenExpire = parseInt(
@@ -32,6 +33,7 @@ export const refreshTokenOptions: ITokenOptions = {
   maxAge: refreshTokenExpire * 24 * 60 * 60 * 1000,
   httpOnly: true,
   sameSite: "none",
+  secure:true,
 };
 
 export const sendToken = (user: IUser, statusCode: number, res: Response) => {
@@ -45,6 +47,8 @@ export const sendToken = (user: IUser, statusCode: number, res: Response) => {
   if (process.env.NODE_ENV === "production") {
     accessTokenOptions.secure = true;
   }
+
+  accessTokenOptions.secure = true;
 
   // send two cookies, one with access token and one with refresh token
   res.cookie("access_token", accessToken, accessTokenOptions);
